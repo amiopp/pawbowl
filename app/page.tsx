@@ -4,6 +4,7 @@ import { FinalCta } from "@/components/FinalCta";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Newsletter } from "@/components/Newsletter";
 import { Recipes } from "@/components/Recipes";
 import { ServingSteps } from "@/components/ServingSteps";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -19,6 +20,7 @@ export default function Home() {
         <ServingSteps />
         <Delivery />
         <FinalCta />
+        <Newsletter />
       </main>
       <Footer />
 
