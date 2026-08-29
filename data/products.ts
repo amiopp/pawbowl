@@ -1,5 +1,5 @@
 export type Product = {
-  id: "poulet" | "boeuf";
+  id: "poulet" | "chat";
   name: string;
   orderName: string;
   weight: string;
@@ -14,26 +14,26 @@ export type Product = {
 export const products: Product[] = [
   {
     id: "poulet",
-    name: "Poulet",
-    orderName: "Poulet 500g",
+    name: "Poulet - Chien",
+    orderName: "Poulet pour chien 500g",
     weight: "500 g",
-    description: "70 % de poulet, légumes, riz et huile végétale.",
+    description: "70 % de poulet, légumes, riz et huile végétale, pour chiens.",
     price: 25,
     available: true,
     image: "/images/recipe-chicken-500g.png",
-    imageAlt: "Repas PawBowl au poulet avec son nouveau packaging de 500 g",
-    highlights: ["70 % de poulet", "Fait maison"],
+    imageAlt: "Repas PawBowl au poulet pour chien avec son packaging de 500 g",
+    highlights: ["70 % de poulet", "Pour chiens"],
   },
   {
-    id: "boeuf",
-    name: "Bœuf",
-    orderName: "Bœuf 500g",
+    id: "chat",
+    name: "Poulet - Chat",
+    orderName: "Poulet pour chat 500g",
     weight: "500 g",
-    description: "70 % de bœuf, légumes, riz et huile végétale.",
-    price: null,
-    available: false,
-    image: "/images/recipe-beef-500g.png",
-    imageAlt: "Repas PawBowl au bœuf avec son nouveau packaging de 500 g",
-    highlights: ["70 % de bœuf", "Bientôt de retour"],
+    description: "70 % de poulet, légumes, riz et huile végétale, pour chats.",
+    price: 25,
+    available: true,
+    image: "/images/recipe-chicken-500g.png",
+    imageAlt: "Repas PawBowl au poulet pour chat avec son packaging de 500 g",
+    highlights: ["70 % de poulet", "Pour chats"],
   },
 ];

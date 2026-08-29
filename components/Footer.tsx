@@ -22,7 +22,7 @@ export function Footer() {
             className="h-auto w-[150px]"
           />
           <p className="mt-4 max-w-sm text-sm leading-6 text-ink-muted">
-            De vrais repas frais pour chiens heureux, préparés avec amour à
+            De vrais repas frais pour chiens et chats, préparés avec amour à
             Marrakech.
           </p>
         </div>

@@ -15,7 +15,7 @@ const steps = [
   {
     icon: Heart,
     title: "Savourez",
-    text: "Votre chien profite d’un repas frais.",
+    text: "Votre chien ou votre chat profite d’un repas frais.",
   },
   {
     icon: Clock3,

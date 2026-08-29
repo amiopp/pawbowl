@@ -16,20 +16,23 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pawbowl.ma"),
-  title: "PawBowl | Repas frais pour chiens à Marrakech",
+  title: "PawBowl | Repas frais pour chiens et chats à Marrakech",
   description:
-    "Des repas frais, naturels et faits avec amour pour votre chien. Préparés et livrés à Marrakech.",
+    "Des repas frais, naturels et faits avec amour pour vos chiens et chats. Préparés et livrés à Marrakech.",
   keywords: [
     "repas frais chien",
+    "repas frais chat",
     "PawBowl",
     "Marrakech",
     "livraison nourriture chien",
+    "livraison nourriture chat",
     "repas naturels chien",
+    "repas naturels chat",
   ],
   openGraph: {
-    title: "PawBowl — De vrais repas pour chiens heureux",
+    title: "PawBowl — De vrais repas pour chiens et chats heureux",
     description:
-      "Repas frais et naturels pour chiens, préparés avec amour à Marrakech.",
+      "Repas frais et naturels pour chiens et chats, préparés avec amour à Marrakech.",
     locale: "fr_MA",
     type: "website",
     images: [

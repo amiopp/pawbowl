@@ -5,7 +5,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 const trustItems = [
   { icon: Leaf, label: "Ingrédients naturels" },
   { icon: ShieldCheck, label: "Sans conservateurs" },
-  { icon: Heart, label: "Fait maison" },
+  { icon: Heart, label: "Pour chiens et chats" },
 ];
 
 export function Hero() {
@@ -31,12 +31,13 @@ export function Hero() {
           </div>
 
           <h1 className="max-w-[720px] font-display text-[clamp(3.35rem,7.2vw,6.4rem)] leading-[0.88] font-bold tracking-[-0.055em] text-navy">
-            De vrais repas pour chiens <span className="text-orange-cta">heureux.</span>
+            De vrais repas pour chiens et chats{" "}
+            <span className="text-orange-cta">heureux.</span>
           </h1>
 
           <p className="mt-7 max-w-[590px] text-lg leading-8 text-navy/76 sm:text-xl sm:leading-9">
-            Des repas frais, naturels et équilibrés, préparés avec amour à
-            Marrakech.
+            Des repas frais, naturels et équilibrés, préparés avec amour pour
+            vos compagnons à Marrakech.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -75,7 +76,7 @@ export function Hero() {
             <div className="relative aspect-[1.22/1] overflow-hidden rounded-[1.55rem] sm:rounded-[2rem]">
               <Image
                 src="/images/hero-marrakech.png"
-                alt="Chien heureux, repas PawBowl et scooter de livraison à Marrakech"
+                alt="PawBowl pour chiens et chats, repas frais et livraison à Marrakech"
                 fill
                 priority
                 quality={90}
@@ -94,7 +95,9 @@ export function Hero() {
               <span className="block text-[11px] font-extrabold tracking-[0.12em] text-orange-cta uppercase">
                 Préparé localement
               </span>
-              <strong className="text-sm text-navy sm:text-base">Avec soin, chaque jour</strong>
+              <strong className="text-sm text-navy sm:text-base">
+                Avec soin, chaque jour
+              </strong>
             </span>
           </div>
         </div>

@@ -15,8 +15,8 @@ export function Recipes() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Nos recettes"
-          title="Deux recettes. Beaucoup de bonheur."
-          description="Des ingrédients simples, des portions généreuses et un goût que votre chien attendra avec impatience."
+          title="Deux recettes. Pour chiens et chats."
+          description="Des ingrédients simples, des portions généreuses et un goût que vos compagnons attendront avec impatience."
         />
 
         <div className="mt-11 grid gap-6 lg:grid-cols-2 lg:gap-8">
@@ -26,8 +26,7 @@ export function Recipes() {
         </div>
 
         <p className="mx-auto mt-7 max-w-2xl text-center text-xs leading-5 text-ink-muted">
-          Le poulet est disponible à 25 DH les 500 g. La recette bœuf est
-          actuellement en rupture de stock.
+          Le poulet est disponible à 25 DH les 500 g pour chiens et chats.
         </p>
       </div>
     </section>

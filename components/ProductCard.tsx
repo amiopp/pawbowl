@@ -4,11 +4,11 @@ import type { Product } from "@/data/products";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export function ProductCard({ product }: { product: Product }) {
-  const RecipeIcon = product.id === "poulet" ? Drumstick : Utensils;
+  const RecipeIcon = product.id === "chat" ? Utensils : Drumstick;
   const accentClasses =
-    product.id === "poulet"
-      ? "bg-green-soft text-green"
-      : "bg-[#f8e7df] text-terracotta";
+    product.id === "chat"
+      ? "bg-[#f8e7df] text-terracotta"
+      : "bg-green-soft text-green";
 
   return (
     <article className="group overflow-hidden rounded-[1.75rem] border border-sand/75 bg-paper shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft sm:rounded-[2rem]">

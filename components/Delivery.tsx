@@ -39,8 +39,8 @@ export function Delivery() {
                 Livraison à <span className="text-orange">Marrakech</span>
               </h2>
               <p className="mt-6 max-w-xl text-base leading-7 text-white/72 sm:text-lg sm:leading-8">
-                Nous livrons rapidement vos repas frais, directement à votre porte,
-                dans tout Marrakech.
+                Nous livrons rapidement vos repas frais pour chiens et chats,
+                directement à votre porte, dans tout Marrakech.
               </p>
               <WhatsAppButton variant="light" className="mt-8 w-full sm:w-auto">
                 Organiser ma livraison
