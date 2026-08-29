@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero-marrakech.png",
+        url: "/images/pawbowl-delivery-marrakech.png",
         width: 941,
         height: 760,
         alt: "PawBowl à Marrakech",

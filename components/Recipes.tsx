@@ -26,7 +26,8 @@ export function Recipes() {
         </div>
 
         <p className="mx-auto mt-7 max-w-2xl text-center text-xs leading-5 text-ink-muted">
-          Le poulet est disponible à 25 DH les 500 g pour chiens et chats.
+          500 g = 25 DH. 1 kg = 45 DH. 2 kg = 80 DH. À partir de 2 kg, chaque
+          kilo supplémentaire baisse de 5 %.
         </p>
       </div>
     </section>
