@@ -32,7 +32,7 @@ export const products: Product[] = [
     description: "70 % de poulet, légumes, riz et huile végétale, pour chats.",
     price: 25,
     available: true,
-    image: "/images/recipe-chicken-500g.png",
+    image: "/images/pawbowl-chat-chicken-500g.png",
     imageAlt: "Repas PawBowl au poulet pour chat avec son packaging de 500 g",
     highlights: ["70 % de poulet", "Pour chats"],
   },
