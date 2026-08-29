@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check, Drumstick, Utensils } from "lucide-react";
+import { Check, Clock3, Drumstick, Utensils } from "lucide-react";
 import type { Product } from "@/data/products";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -9,8 +9,6 @@ export function ProductCard({ product }: { product: Product }) {
     product.id === "chat"
       ? "bg-[#f8e7df] text-terracotta"
       : "bg-green-soft text-green";
-  const featuredPrice =
-    product.prices.find((tier) => tier.label === "500 g") ?? product.prices[0];
 
   return (
     <article className="group overflow-hidden rounded-[1.75rem] border border-sand/75 bg-paper shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft sm:rounded-[2rem]">
@@ -21,10 +19,12 @@ export function ProductCard({ product }: { product: Product }) {
           fill
           quality={88}
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition duration-700 group-hover:scale-[1.025]"
+          className={`object-cover transition duration-700 group-hover:scale-[1.025] ${product.available ? "" : "grayscale-[0.18] saturate-[0.72]"}`}
         />
-        <span className="absolute top-4 left-4 rounded-full bg-paper/95 px-3 py-1.5 text-xs font-extrabold text-navy shadow-sm backdrop-blur">
-          Format {product.weight}
+        <span
+          className={`absolute top-4 left-4 rounded-full px-3 py-1.5 text-xs font-extrabold shadow-sm backdrop-blur ${product.available ? "bg-paper/95 text-navy" : "bg-terracotta text-white"}`}
+        >
+          {product.available ? `Format ${product.weight}` : "Rupture de stock"}
         </span>
       </div>
 
@@ -43,16 +43,21 @@ export function ProductCard({ product }: { product: Product }) {
               </h3>
             </div>
           </div>
-
-          <div className="shrink-0 text-right">
-            <strong className="font-display text-3xl font-bold tracking-[-0.04em] text-navy sm:text-4xl">
-              {featuredPrice.price}
-            </strong>
-            <span className="ml-1 text-sm font-extrabold text-navy">DH</span>
-            <span className="block text-[11px] font-bold text-ink-muted">
-              les {featuredPrice.label}
+          {product.available && product.price !== null ? (
+            <div className="shrink-0 text-right">
+              <strong className="font-display text-3xl font-bold tracking-[-0.04em] text-navy sm:text-4xl">
+                {product.price}
+              </strong>
+              <span className="ml-1 text-sm font-extrabold text-navy">DH</span>
+              <span className="block text-[11px] font-bold text-ink-muted">
+                les {product.weight}
+              </span>
+            </div>
+          ) : (
+            <span className="shrink-0 rounded-full bg-[#f6e5df] px-3 py-2 text-xs font-extrabold text-terracotta">
+              Indisponible
             </span>
-          </div>
+          )}
         </div>
 
         <p className="mt-5 min-h-12 text-[15px] leading-6 text-ink-muted sm:text-base">
@@ -71,29 +76,21 @@ export function ProductCard({ product }: { product: Product }) {
           ))}
         </div>
 
-        <div className="mt-6 grid gap-2 sm:grid-cols-2">
-          {product.prices.map((tier) => (
-            <div
-              key={tier.label}
-              className={`flex items-center justify-between rounded-2xl border px-4 py-3 text-sm font-bold ${
-                tier.label === "500 g"
-                  ? "border-orange/20 bg-orange-soft/40 text-navy"
-                  : "border-sand/70 bg-white text-navy/80"
-              }`}
-            >
-              <span>{tier.label}</span>
-              <span>{tier.price} DH</span>
-            </div>
-          ))}
-        </div>
-
-        <p className="mt-3 text-xs leading-5 text-ink-muted">
-          À partir de 2 kg, le tarif baisse de 5 % par kilo supplémentaire.
-        </p>
-
-        <WhatsAppButton product={product.orderName} className="mt-6 w-full">
-          Commander sur WhatsApp
-        </WhatsAppButton>
+        {product.available ? (
+          <WhatsAppButton product={product.orderName} className="mt-6 w-full">
+            Commander sur WhatsApp
+          </WhatsAppButton>
+        ) : (
+          <button
+            type="button"
+            disabled
+            aria-label={`${product.name} en rupture de stock`}
+            className="mt-6 inline-flex min-h-13 w-full cursor-not-allowed items-center justify-center gap-2.5 rounded-full bg-[#ead8d0] px-6 font-extrabold text-terracotta"
+          >
+            <Clock3 className="size-5" aria-hidden="true" />
+            Rupture de stock
+          </button>
+        )}
       </div>
     </article>
   );

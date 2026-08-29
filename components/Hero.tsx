@@ -75,7 +75,7 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white p-2 shadow-soft sm:rounded-[2.5rem] sm:p-3">
             <div className="relative aspect-[1.22/1] overflow-hidden rounded-[1.55rem] sm:rounded-[2rem]">
               <Image
-                src="/images/pawbowl-delivery-marrakech.png"
+                src="/images/hero-marrakech.png"
                 alt="PawBowl pour chiens et chats, repas frais et livraison à Marrakech"
                 fill
                 priority
