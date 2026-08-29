@@ -81,7 +81,7 @@ export function Hero() {
                 priority
                 quality={90}
                 sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover object-[center_18%]"
+                className="object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/18 via-transparent to-white/5" />
             </div>
